@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">All in One</string>
     <string name="title">All in One</string>
     <string name="status">Meet all your desires at once</string>
     <string name="title_activity_tabbed">TabbedActivity</string>

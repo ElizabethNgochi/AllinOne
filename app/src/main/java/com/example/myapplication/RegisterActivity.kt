@@ -49,14 +49,15 @@ class RegisterActivity : AppCompatActivity() {
                 var userData = User(nameFirst,nameSecond, email, password, time)
                 var databaseRef = FirebaseDatabase.getInstance().
                 getReference().child("Users/$time")
+
+                var intent = Intent(this, TabbedActivity::class.java)
+                startActivity(intent)
                 //Finally store data
                 databaseRef.setValue(userData).addOnCompleteListener { task ->
                     if (task.isSuccessful){
                         Toast.makeText(this,"User saved successfully",
                             Toast.LENGTH_SHORT).show()
 
-                        var intent = Intent(this, TabbedActivity::class.java)
-                        startActivity(intent)
 
                     }else{
                         Toast.makeText(this, "Saving failed",
